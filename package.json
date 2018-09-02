@@ -1,0 +1,9 @@
+{
+  "name": "ask-utils",
+  "version": "1.0.0",
+  "description": "utils for alexa skills",
+  "main": "index.js",
+  "repository": "git@github.com:fdistorted/ask-utils.git",
+  "author": "fdistorted <andrejjrom@gmail.com>",
+  "license": "MIT"
+}
