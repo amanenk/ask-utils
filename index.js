@@ -62,5 +62,5 @@ module.exports.supportsDisplay = (handlerInput) => {
         handlerInput.requestEnvelope.context.System.device.supportedInterfaces &&
         handlerInput.requestEnvelope.context.System.device.supportedInterfaces.Display
     return hasDisplay;
-},
+}
 
