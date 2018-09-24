@@ -42,3 +42,25 @@ module.exports.randomString = (array) => {
     return "";
 }
 
+module.exports.enumerateStrings = (strings) => {
+    if (strings.length == 1) {
+        return strings[0];
+    }
+    let output = "";
+    for (let i = 0; i < strings.length - 2; i++) {
+        output += `${strings[i]}, `;
+    }
+    output += `${strings[strings.length - 2]} and ${strings[strings.length - 1]}`
+    return output;
+}
+
+module.exports.supportsDisplay = (handlerInput) => {
+    var hasDisplay =
+        handlerInput.requestEnvelope.context &&
+        handlerInput.requestEnvelope.context.System &&
+        handlerInput.requestEnvelope.context.System.device &&
+        handlerInput.requestEnvelope.context.System.device.supportedInterfaces &&
+        handlerInput.requestEnvelope.context.System.device.supportedInterfaces.Display
+    return hasDisplay;
+},
+
